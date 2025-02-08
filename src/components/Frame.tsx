@@ -212,7 +212,11 @@ export default function Frame() {
             </button>
             <button
               className="bg-purple-500 text-white px-4 py-2 rounded-lg font-bold hover:bg-purple-400 transition-colors"
-              onClick={() => sdk.actions.viewProfile({ fid: context?.user?.fid })}
+              onClick={() => {
+                if (context?.user?.fid) {
+                  sdk.actions.viewProfile({ fid: context.user.fid });
+                }
+              }}
             >
               Share It 🔗
             </button>
