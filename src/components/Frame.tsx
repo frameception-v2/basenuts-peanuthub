@@ -212,7 +212,7 @@ export default function Frame() {
             </button>
             <button
               className="bg-purple-500 text-white px-4 py-2 rounded-lg font-bold hover:bg-purple-400 transition-colors"
-              onClick={() => sdk.actions.share({ text: "Check my 🥜 stats!", url: window.location.href })}
+              onClick={() => sdk.actions.cast({ text: "Check my 🥜 stats! " + window.location.href })}
             >
               Share It 🔗
             </button>
